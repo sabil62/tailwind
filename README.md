@@ -1,9 +1,10 @@
 # Important Links for tailwind
 
-https://medium.com/swlh/twin-macro-on-cra-with-react-17-e95c54f88097
-https://github.com/ben-rogerson/twin.macro
-https://tailwindcss.com/docs
-https://www.youtube.com/watch?v=ks0Fsn6Csa4&ab_channel=JackHerrington
+https://medium.com/swlh/twin-macro-on-cra-with-react-17-e95c54f88097 \
+https://github.com/ben-rogerson/twin.macro \
+https://www.figma.com/file/H80UgbL5NuXoJ4XA9nHWYz/Kalysys?node-id=1842%3A34626 \
+https://tailwindcss.com/docs \
+https://www.youtube.com/watch?v=ks0Fsn6Csa4&ab_channel=JackHerrington \
 
 # Getting Started with Create React App
 
