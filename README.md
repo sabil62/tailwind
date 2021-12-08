@@ -1,3 +1,10 @@
+# Important Links for tailwind
+
+https://medium.com/swlh/twin-macro-on-cra-with-react-17-e95c54f88097
+https://github.com/ben-rogerson/twin.macro
+https://tailwindcss.com/docs
+https://www.youtube.com/watch?v=ks0Fsn6Csa4&ab_channel=JackHerrington
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +75,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# tailwind" 
+"# tailwind"
