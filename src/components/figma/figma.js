@@ -23,17 +23,19 @@ const LeftQuater = tw.div`w-8/12 inline-block`;
 const RightQuater = tw.div`w-4/12 inline-block`;
 const BoldText = tw.span`text-[28.8px] font-semibold tracking-[0.65px] flex items-center`;
 
-const FlexB = styled.span(({ isLine, isMargin }) => [
+const FlexB = styled.span(({ isLine, isMargin, both }) => [
   tw`flex items-center `,
   isLine && tw`w-[3rem] justify-center`,
   isMargin && tw`my-[0.4rem]`,
+  both && tw`justify-center`,
 ]);
 // #62BA38
 
-const FontWeight = styled.span(({ weightBold, isStartEnd }) => [
+const FontWeight = styled.span(({ weightBold, isStartEnd, boldest }) => [
   tw`font-normal text-[15px]`,
   weightBold && tw`font-semibold text-gray-700`,
   isStartEnd && tw`font-semibold text-[13px] pl-[1rem] mt-[1.6rem]`,
+  boldest && tw`font-semibold block text-gray-900`,
 ]);
 
 const ShadowBox = tw.div`h-[70px] w-[520px] rounded-[8px] px-[20px] py-[12px] mt-[0.5rem] mb-[1rem]`;
@@ -47,6 +49,17 @@ const BottomMargin = tw.div`mb-[0.3rem]`;
 const RightButtonFlex = tw.div`flex justify-end text-white`;
 const RightButton = tw.span`px-[20px] py-[6px] text-[16.4px] font-semibold rounded-[4px]`;
 const Available = tw.span`rounded-[12px] text-[15px] font-bold text-white px-[8px] py-[4px] tracking-wide ml-[0.4rem]`;
+
+const Five12 = tw.div`inline-block w-5/12`;
+// const Two12 = tw.div`inline-block w-2/12 text-center text-[2rem] font-bold`;
+const Two12 = styled.div(({ bold }) => [
+  tw`inline-block w-2/12 `,
+  bold && tw`text-center text-[2rem] font-bold`,
+]);
+
+const DownFlex = tw.div`inline-block pl-[5px]`;
+
+const Three12 = tw.div`inline-block w-3/12`;
 
 const DetailPopup = () => {
   let GreenLine = (
@@ -132,7 +145,21 @@ const DetailPopup = () => {
             </div>
             {/* box segment  */}
             <ShadowBox style={{ boxShadow: "0px 0px 14px 0px #00000014" }}>
-              shadowbox friday calendar
+              <Five12>
+                <Three12 style={{ color: "#62BA38" }}>Icon</Three12>
+                <DownFlex>
+                  <FontWeight boldest>Friday</FontWeight>
+                  <FontWeight>11 Dec 2021</FontWeight>
+                </DownFlex>
+              </Five12>
+              <Two12 bold> &gt; </Two12>
+              <Five12>
+                <Three12 style={{ color: "#FF0000" }}>Icon </Three12>
+                <DownFlex>
+                  <FontWeight boldest>Sunday</FontWeight>
+                  <FontWeight bold>13 Dec 2021</FontWeight>
+                </DownFlex>
+              </Five12>
             </ShadowBox>
             <BigRed style={{ color: "#FF0000" }}>VARIED ITINERARY *</BigRed>
             <MidText isDown style={{ color: " #5A5A5A" }}>
