@@ -5,9 +5,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "tailwindcss/dist/base.min.css";
 
+import DetailPopup from "./components/figma/figma";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <DetailPopup />
   </React.StrictMode>,
   document.getElementById("root")
 );

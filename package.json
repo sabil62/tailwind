@@ -44,5 +44,8 @@
     "twin": {
       "config": "tailwind.config.js"
     }
+  },
+  "devDependencies": {
+    "postcss": "^8.4.4"
   }
 }
