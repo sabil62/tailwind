@@ -2,10 +2,10 @@ import tw, { styled } from "twin.macro";
 
 const Modal = tw.div`h-screen bg-black bg-opacity-50 w-screen fixed top-0 left-0 z-30  `;
 const Central = tw.div`flex justify-center items-center h-screen`;
-const CentralBox = tw.div`h-[42rem] w-[70rem] z-40 bg-gray-500 rounded-[18px] relative`;
-const LeftBox = tw.div`h-[42rem] w-[41rem] bg-white rounded-[18px] inline-block absolute left-0 z-[60] pt-[3rem] pb-[1.5rem] pl-[4rem] pr-[4rem] font-sans `;
-const RightBox = tw.div`h-[42rem] w-[30rem] bg-red-300 inline-block absolute right-0 rounded-r-[18px] z-50 `;
-const BlockBoxForCentering = tw.div`grid justify-center items-center h-[42rem] w-[31rem]`;
+const CentralBox = tw.div`h-[43.5rem] w-[70rem] z-40 bg-gray-500 rounded-[18px] relative`;
+const LeftBox = tw.div`h-[43.5rem] w-[41rem] bg-white rounded-[18px] inline-block absolute left-0 z-[60] pt-[3rem] pb-[1.5rem] pl-[4rem] pr-[4rem] font-sans `;
+const RightBox = tw.div`h-[43.5rem] w-[30rem] bg-red-300 inline-block absolute right-0 rounded-r-[18px] z-50 `;
+const BlockBoxForCentering = tw.div`grid justify-center items-center h-[43.5rem] w-[31rem]`;
 const RoundedBox = tw.div`h-[30.4rem] w-[20rem] rounded-[9.2rem] bg-red-100 block ml-[0.2rem]`;
 
 //leftbox inside
@@ -31,15 +31,18 @@ const FlexB = styled.span(({ isLine, isMargin, both }) => [
 ]);
 // #62BA38
 
-const FontWeight = styled.span(({ weightBold, isStartEnd, boldest }) => [
-  tw`font-normal text-[15px]`,
-  weightBold && tw`font-semibold text-gray-700`,
-  isStartEnd && tw`font-semibold text-[13px] pl-[1rem] mt-[1.6rem]`,
-  boldest && tw`font-semibold block text-gray-900`,
-]);
+const FontWeight = styled.span(
+  ({ weightBold, isStartEnd, boldest, semibold }) => [
+    tw`font-normal text-[15px]`,
+    weightBold && tw`font-semibold text-gray-700`,
+    isStartEnd && tw`font-semibold text-[13px] pl-[1rem] mt-[1.6rem]`,
+    boldest && tw`font-semibold block text-gray-900`,
+    semibold && tw`font-semibold text-[13.4px] text-gray-700`,
+  ]
+);
 
 const ShadowBox = tw.div`h-[70px] w-[520px] rounded-[8px] px-[20px] py-[12px] mt-[0.5rem] mb-[1rem]`;
-const BigRed = tw.div`text-[15px] font-semibold tracking-tight`;
+const BigRed = tw.div`text-[15px] font-semibold tracking-tight pt-[0.9rem]`;
 
 const Four12 = styled.span(({ three }) => [
   tw`inline-block w-4/12 ml-[0.4rem]`,
@@ -149,7 +152,7 @@ const DetailPopup = () => {
                 <Three12 style={{ color: "#62BA38" }}>Icon</Three12>
                 <DownFlex>
                   <FontWeight boldest>Friday</FontWeight>
-                  <FontWeight>11 Dec 2021</FontWeight>
+                  <FontWeight semibold>11 Dec 2021</FontWeight>
                 </DownFlex>
               </Five12>
               <Two12 bold> &gt; </Two12>
@@ -157,7 +160,7 @@ const DetailPopup = () => {
                 <Three12 style={{ color: "#FF0000" }}>Icon </Three12>
                 <DownFlex>
                   <FontWeight boldest>Sunday</FontWeight>
-                  <FontWeight bold>13 Dec 2021</FontWeight>
+                  <FontWeight semibold>13 Dec 2021</FontWeight>
                 </DownFlex>
               </Five12>
             </ShadowBox>
@@ -197,9 +200,21 @@ const DetailPopup = () => {
               </RightButton>
             </RightButtonFlex>
           </LeftBox>
-          <RightBox>
+          <RightBox
+            style={{
+              backgroundImage:
+                "url(https://wallpaperbat.com/img/66725-blue-sky-prairie-scenery-22900-wallpaper-landscape-scenery.jpg)",
+              backgroundSize: "cover",
+            }}
+          >
             <BlockBoxForCentering>
-              <RoundedBox></RoundedBox>
+              <RoundedBox
+                style={{
+                  backgroundImage:
+                    "url(https://www.wallpapers4u.org/wp-content/uploads/sky_evening_landscape_field_road_country_silence_serenity_63266_1920x1080.jpg)",
+                  backgroundSize: "cover",
+                }}
+              ></RoundedBox>
             </BlockBoxForCentering>
           </RightBox>
         </CentralBox>
